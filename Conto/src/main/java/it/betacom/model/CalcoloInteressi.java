@@ -41,8 +41,8 @@ public class CalcoloInteressi {
 		} else {
 			System.out.println("Impossibile generare interessi. Errore Date");
 		}
-
-		System.out.println("Interessi accumulati : " + conto.accInteressi);
+		if(conto.accInteressi > 0)
+			System.out.println("Interessi accumulati : " + conto.accInteressi + " Data : " + data.toString());
 
 	}
 

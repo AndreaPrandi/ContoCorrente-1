@@ -121,7 +121,12 @@ public abstract class Conto {
 	public void generaInteressi(String Data) {
 		// TODO Auto-generated method stub
 		LocalDate data = LocalDate.parse(Data);
+		double tmp = getSaldo();
 		this.interessi.generaInteressi(data, 1);
+		this.accInteressi = getSaldo() - tmp;
+		System.out.println("Interessi accumulati : " + accInteressi + " | Data : "+ data.toString());
+		this.accInteressi = 0;
+		
 	}
 
 

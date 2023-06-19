@@ -28,10 +28,13 @@ public class ContoInvestimento extends Conto {
 
 	public void generaInteressi(String Data, int diretto) {
 		LocalDate data = LocalDate.parse(Data);
-		
+		double tmp = getSaldo();
 		tassoInteresse = Math.random() * 2 - 1;
 		
 		interessi.generaInteressi(tassoInteresse, data, diretto);
+		this.accInteressi = getSaldo() - tmp;
+		System.out.println("Interessi accumulati : " + accInteressi + " | Data : "+ data.toString());
+		this.accInteressi = 0;
 	}
 
 }
