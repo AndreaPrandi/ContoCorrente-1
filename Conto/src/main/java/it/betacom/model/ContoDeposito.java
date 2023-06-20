@@ -13,13 +13,13 @@ public class ContoDeposito extends Conto {
 	
 	public void prelievo(int cifra, String data) {
 		LocalDate Data = LocalDate.parse(data);
-		super.prelievo(cifra, data);
 		this.interessi.generaInteressi(Data, 0);
+		super.prelievo(cifra, data);	
 	}
 	
 	public void versamento(int cifra, String data) {
 		LocalDate Data = LocalDate.parse(data);
-		super.versamento(cifra, data);
 		this.interessi.generaInteressi(Data, 0);
+		super.versamento(cifra, data);
 	}
 }

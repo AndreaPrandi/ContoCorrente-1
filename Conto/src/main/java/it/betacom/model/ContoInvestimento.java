@@ -16,13 +16,13 @@ public class ContoInvestimento extends Conto {
 	}
 	
 	public void prelievo(int cifra, String data) {
-		super.prelievo(cifra, data);
 		generaInteressi(data, 0);
+		super.prelievo(cifra, data);
 	}
 	
 	public void versamento(int cifra, String data) {
-		super.versamento(cifra, data);
 		this.generaInteressi(data, 0);
+		super.versamento(cifra, data);
 	}
 	
 
